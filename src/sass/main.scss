@@ -1,0 +1,24 @@
+$pureWhite:#ffffff;
+$primary-pink:#FF7979;
+$primary-green:#38CC8B;
+$primary-purple:#5E54A4;
+$primary-black:#3D3B48;
+
+$mobile-heading-font:1.75rem;
+$desktop-heading-font:3.12rem;
+$main-text-font:1rem;
+$secondary-text-font:0.93rem;
+$input-text-font:0.87rem;
+$footer-font:0.68rem;
+
+
+*{
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+}
+
+body{
+   font-family: 'Poppins', sans-serif; 
+   line-height: 1.6;
+}
