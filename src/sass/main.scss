@@ -16,9 +16,150 @@ $footer-font:0.68rem;
     box-sizing: border-box;
     margin:0;
     padding:0;
+    font-family: 'Poppins', sans-serif; 
 }
 
 body{
-   font-family: 'Poppins', sans-serif; 
+  
    line-height: 1.6;
+   background-color: $primary-pink;
+   background-image: url('../asset/bg-intro-mobile.png');
+   background-position: center;
+}
+
+.container{
+    max-width: 88%;
+    margin:auto;
+  
+}
+
+.header{
+    margin-top:5.5rem;
+    
+    h1{
+      color:$pureWhite;
+      font-size: $mobile-heading-font;
+      font-weight: 700;
+      line-height: 2.25rem;
+      text-align: center;
+    
+    }
+    p{
+        color:$pureWhite;
+        font-size: $main-text-font;
+        line-height: 1.625rem;
+        font-weight:400;
+        margin-top: 1rem;
+        text-align: center;
+        padding:0.5rem;
+    }
+}
+
+.pricing-form-container{
+    margin-top: 4rem;
+    
+    .pricing{
+        background:$primary-purple;
+        height: 5.5rem;
+        border-radius:10px;
+        box-shadow: 0px 8px 0px rgba(0, 0, 0, 0.14688);
+        display:flex;
+        align-items: center;
+        justify-content: center;
+        
+        .content{
+          width:194px;
+         // border:1px solid blue;
+          display: flex;
+        
+
+          p{
+              color:$pureWhite;
+              font-size: 15px;
+              text-align: center;
+              line-height:26px ;
+              font-weight: 300;
+              letter-spacing: 0.27px;
+
+              span{
+                  font-weight: 600;
+              }
+          }
+        }
+    }
+}
+
+.signUp-form{
+   background:$pureWhite;
+   margin: 1.5rem 0 4.25rem 0;
+   border-radius: 10px;
+   box-shadow: 0px 8px 0px rgba(0, 0, 0, 0.14688);
+   padding:1.5rem;
+   
+   .input-text{
+    border:1px solid #DEDEDE;
+    border-radius: 5px;
+    height:56px;
+    width: 100%;
+    padding:15px 20px;
+    
+    &::placeholder{
+      font-size: $input-text-font;
+      color:$primary-black;
+      font-weight: 600;
+      letter-spacing: 0.25px;
+      line-height: 26px;
+      mix-blend-mode: normal;
+       opacity: 0.75;
+    }
+    
+   }
+   form{
+    & :nth-child(2) .input-text, 
+    & :nth-child(3) .input-text ,
+    & :nth-child(4) .input-text
+    {
+       margin-top:1rem;
+    }
+
+    button{
+        border:none;
+        outline: transparent;
+        background:$primary-green;
+        color:$pureWhite;
+        padding:1.2rem 2rem;
+        width:100%;
+        border-radius: 5px;
+        box-shadow: inset 0px -4px 0px rgba(0, 0, 0, 0.0908818);
+        font-size:$secondary-text-font;
+        font-weight: 600;
+        letter-spacing: 1px;
+        margin:1rem 0 0.5rem 0;
+        
+    }
+
+    .term-container{
+       text-align: center;
+        font-size: $footer-font;
+        color:#BAB7D4;
+        line-height: 21px;
+        font-weight: 500;
+        padding:0.5rem 1rem;
+        span{
+            color:$primary-pink;
+            font-weight: 700;
+        }
+    }
+}
+   
+   
+}
+
+.wrapper{
+    @media(min-width:1280px)
+    {
+       display:grid;
+       grid-template-columns: repeat(2,1fr);
+       border:1px solid red;
+    }
 }
