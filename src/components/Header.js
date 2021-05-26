@@ -3,7 +3,7 @@ import "../sass/main.scss";
 
 const Header = () => {
     return (
-        <div className="header container">
+        <div className="header">
             <h1> Learn to code by watching others </h1>
             <p> See how experienced developers solve problems in real-time. 
                 Watching scripted tutorials is great, but understanding how developers 

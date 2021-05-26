@@ -8,7 +8,7 @@ const App = () => {
     return (
         <div className="wrapper">
             <Header/>
-            <div className="pricing-form-container container">
+            <div className="pricing-form-container">
                <Pricing/> 
                <SignUpForm/>
             </div>
