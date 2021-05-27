@@ -14,57 +14,40 @@ const SignUpForm = () => {
               {renderErrors(formProps.meta)}
             </div>
         )
+
+
     }
+
+    const isTiping = (formProps) =>
+    {
+      if(formProps.meta.error && formProps.meta.touched && (document.querySelector("#content input")!=null))
+      {
+         if(document.querySelector("#content input").value !=="")
+         {
+             document.querySelector("#content").classList.remove("input-email-container");
+
+         }
+      }
+    }
+   
+    
 
     const renderInputEmail = (formProps) =>{
         
         const className = `${formProps.meta.error && formProps.meta.touched? 'input-error': 'input-text'}`
-       
+    
+        
         return(
             <div id="content" className = {`${formProps.meta.error && formProps.meta.touched? 'input-email-container': ''}`}  >
               <input{...formProps.input} type={formProps.type} className={className} placeholder={formProps.placeholder} autoComplete="off"/>
               {renderErrors(formProps.meta)}
+              {isTiping(formProps)}
+
             </div>
         )
+
+ 
     }
-    const renderFocus = (formProps) =>{
-      console.log(formProps);
-      
-      if(formProps.target.classList.contains("input-error"))
-      {
-        
-        const a = document.querySelector(".input-email-container");
-         console.log(a);
-         a.classList.toggle("input-email-container");
-        
-       /*   if(formProps.meta.error && formProps.meta.touched)
-         {
-            document.querySelector("#content input")
-            
-         }
- */
-        
-      }
-    }
-
-    const renderFocusOut = (formProps) =>{
-        console.log(formProps);
-
-        if(formProps.target.classList.contains("input-error"))
-        {
-            
-            const a = document.querySelector(".input-email-container")
-            console.log(a);
-            a.classList.toggle("input-email-container")
-           
-          
-            
-
-            
-        }
-        
-      }
-  
 
     const renderErrors = ({error,touched}) =>{
        if(touched && error)
@@ -82,7 +65,7 @@ const SignUpForm = () => {
             <form>
             <Field name="firstName" type="text" component={renderInput} placeholder="First Name"/> 
             <Field name="lastName"  type="text" component={renderInput} placeholder="Last Name"/> 
-            <Field name="email" type="email"component={renderInputEmail} placeholder="Enter Email" onFocus={renderFocus} onBlur={renderFocusOut}/> 
+            <Field name="email" type="email"component={renderInputEmail} placeholder="Enter Email" /> 
             <Field name="password" type="password" component={renderInput} placeholder="Password"/> 
              <button> CLAIM YOUR FREE TRIAL</button>
              <div className="term-container">
